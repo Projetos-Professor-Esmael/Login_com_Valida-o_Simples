@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login do Portal</title>
+</head>
+<body>
+  <h2>Login do Portal</h2>
+  <form id="loginForm">
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="seuemail@gmail.com" required>
+    <br><br>
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    // Validação simples de e-mail Gmail para simulação
+    const loginForm = document.getElementById("loginForm");
+    loginForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      // Checa se o e-mail é do Gmail
+      if (email.endsWith("@gmail.com")) {
+        // Simulação de verificação de credenciais
+        if (email === "usuario@gmail.com" && password === "senha123") {
+          message.textContent = "Login bem-sucedido! Redirecionando para o portal...";
+          // Aqui você pode redirecionar o usuário
+          setTimeout(() => {
+            window.location.href = "portal_conteudo.html";
+          }, 2000);
+        } else {
+          message.textContent = "E-mail ou senha incorretos.";
+        }
+      } else {
+        message.textContent = "Por favor, use um e-mail do Gmail.";
+      }
+    });
+  </script>
+</body>
+</html>

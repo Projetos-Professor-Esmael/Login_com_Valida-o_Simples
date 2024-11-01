@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Conteúdo</title>
+</head>
+<body>
+  <h2>Bem-vindo ao Portal de Conteúdo!</h2>
+  <p>Aqui você terá acesso a conteúdos exclusivos.</p>
+
+  <!-- Conteúdo do Portal -->
+  <section>
+    <h3>Conteúdos Recentes</h3>
+    <ul>
+      <li><a href="#artigo1">Artigo 1: Inovações em Tecnologia</a></li>
+      <li><a href="#artigo2">Artigo 2: Tendências de Mercado</a></li>
+      <li><a href="#artigo3">Artigo 3: Novidades em IA</a></li>
+    </ul>
+  </section>
+
+  <br>
+  <!-- Botão de Logout -->
+  <button id="logoutButton">Sair</button>
+
+  <script>
+    // Simulação de logout
+    const logoutButton = document.getElementById("logoutButton");
+    logoutButton.addEventListener("click", function() {
+      alert("Você saiu do portal. Redirecionando para a página de login...");
+      // Redireciona o usuário para a página de login
+      window.location.href = "index_login.html"; // Certifique-se de que o nome do arquivo de login seja "login.html"
+    });
+  </script>
+</body>
+</html>
